@@ -1,4 +1,4 @@
-const API_KEY = "your apikey";
+import { API_KEY } from "./config.js";
 const url = "https://newsapi.org/v2/everything?q=";
 
 window.addEventListener("load", () => fetchNews("India"));
@@ -49,3 +49,17 @@ function onNavItemClick(id) {
   curSelectedNav.classList.add('active');
 }
 
+const searchButton = document.getElementById('search-button');
+const searchText = document.getElementById('news-input');
+
+searchButton.addEventListener('click', () => {
+  const query = searchText.value;
+  if(!query) return;
+  fetchNews(query);
+  curSelectedNav?.classList.remove('active');
+  curSelectedNav = null;
+})
+
+function reload() {
+  window.location.reload();
+}
