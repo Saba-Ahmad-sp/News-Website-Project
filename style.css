@@ -23,6 +23,13 @@ p {
   font-family: "Roboto", sans-serif;
   color: var(--secondary-text-color);
   line-height: 1.4rem;
+  color: #222831;
+}
+h3{
+  color: rgb(24, 24, 24);
+}
+h6{
+  color: #222831;
 }
 
 a {
@@ -64,6 +71,9 @@ nav {
 
 .nav-links ul {
   gap: 16px;
+}
+.nav-item.active{
+  color: #2294ed;
 }
 .hover-link {
   cursor: pointer;
